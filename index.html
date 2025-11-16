@@ -1,722 +1,313 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Network - Protect Earth</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8" />
+    <title>江苏盐城 · 风土人情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
         * {
-            margin: 0;
-            padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
-        :root {
-            --primary: #2e7d32;
-            --secondary: #4caf50;
-            --accent: #8bc34a;
-            --light: #e8f5e9;
-            --dark: #1b5e20;
-            --text: #333333;
-            --white: #ffffff;
-        }
-
         body {
-            background-color: var(--light);
-            color: var(--text);
-            line-height: 1.6;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                         "Microsoft YaHei", sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f5f7fa;
         }
-
         header {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            color: var(--white);
-            padding: 1rem 0;
+            background: linear-gradient(135deg, #0052d9, #00a6ff);
+            color: #fff;
+            padding: 40px 16px 60px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0 0 10px;
+            font-size: 32px;
+            letter-spacing: 2px;
+        }
+        header p {
+            margin: 0;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        nav {
+            background: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 10;
         }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.8rem;
-            font-weight: 700;
-        }
-
-        .logo i {
-            font-size: 2rem;
-        }
-
         nav ul {
-            display: flex;
+            margin: 0 auto;
+            padding: 0 16px;
+            max-width: 960px;
             list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 2rem;
-        }
-
-        nav ul li a {
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            padding: 0.5rem 0;
-            position: relative;
-        }
-
-        nav ul li a:hover {
-            color: var(--accent);
-        }
-
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--accent);
-            transition: width 0.3s ease;
-        }
-
-        nav ul li a:hover::after {
-            width: 100%;
-        }
-
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 80vh;
             display: flex;
-            align-items: center;
-            text-align: center;
-            color: var(--white);
+            flex-wrap: wrap;
         }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
+        nav li {
+            margin: 6px 12px 6px 0;
         }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-        }
-
-        .btn {
+        nav a {
             display: inline-block;
-            background-color: var(--accent);
-            color: var(--white);
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
+            padding: 6px 10px;
+            border-radius: 16px;
             text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            color: #0052d9;
+            border: 1px solid rgba(0,82,217,0.2);
+            transition: all 0.2s;
         }
-
-        .btn:hover {
-            background-color: var(--primary);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        nav a:hover {
+            background: #0052d9;
+            color: #fff;
         }
-
-        section {
-            padding: 5rem 0;
+        main {
+            max-width: 960px;
+            margin: -40px auto 40px;
+            padding: 0 16px 32px;
         }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 24px 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 16px rgba(15,35,95,0.08);
         }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-            position: relative;
-            display: inline-block;
+        .card h2 {
+            margin-top: 0;
+            font-size: 22px;
+            border-left: 4px solid #0052d9;
+            padding-left: 10px;
         }
-
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: var(--accent);
-            border-radius: 2px;
+        .tagline {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 16px;
         }
-
-        .section-title p {
-            color: var(--text);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .about-img {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .about-img img {
+        .hero-img {
             width: 100%;
-            height: auto;
+            border-radius: 12px;
+            margin: 16px 0 6px;
             display: block;
-            transition: transform 0.5s ease;
         }
-
-        .about-img:hover img {
-            transform: scale(1.05);
-        }
-
-        .about-text h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--dark);
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
-        }
-
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .stat-item {
+        .img-caption {
+            font-size: 12px;
+            color: #888;
             text-align: center;
-            padding: 2rem 1rem;
-            background-color: var(--white);
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
         }
-
-        .stat-item:hover {
-            transform: translateY(-10px);
-        }
-
-        .stat-item i {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .stat-item h3 {
-            font-size: 2.5rem;
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-item p {
-            color: var(--text);
-        }
-
-        .initiatives {
-            background-color: var(--white);
-        }
-
-        .initiatives-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        .initiative-card {
-            background-color: var(--light);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .initiative-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .initiative-img {
-            height: 200px;
-            overflow: hidden;
-        }
-
-        .initiative-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .initiative-card:hover .initiative-img img {
-            transform: scale(1.1);
-        }
-
-        .initiative-content {
-            padding: 1.5rem;
-        }
-
-        .initiative-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--dark);
-        }
-
-        .initiative-content p {
-            margin-bottom: 1.5rem;
-        }
-
-        .cta {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            color: var(--white);
-            text-align: center;
-            padding: 5rem 0;
-        }
-
-        .cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .cta p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta .btn {
-            background-color: var(--white);
-            color: var(--primary);
-        }
-
-        .cta .btn:hover {
-            background-color: var(--accent);
-            color: var(--white);
-        }
-
-        footer {
-            background-color: var(--dark);
-            color: var(--white);
-            padding: 3rem 0 1rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-column h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 2px;
-            background-color: var(--accent);
-        }
-
-        .footer-column p {
-            margin-bottom: 1rem;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-links li a {
-            color: var(--light);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .footer-links li a:hover {
-            color: var(--accent);
-            padding-left: 5px;
-        }
-
-        .social-links {
+        .two-cols {
             display: flex;
-            gap: 1rem;
+            flex-wrap: wrap;
+            gap: 16px;
         }
-
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: var(--white);
-            text-decoration: none;
-            transition: all 0.3s ease;
+        .col {
+            flex: 1 1 260px;
         }
-
-        .social-links a:hover {
-            background-color: var(--accent);
-            transform: translateY(-5px);
+        ul {
+            padding-left: 20px;
         }
-
-        .copyright {
+        footer {
             text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 16px;
+            font-size: 12px;
+            color: #777;
         }
-
-        .mobile-menu {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
+        a {
+            color: #0052d9;
         }
-
-        @media (max-width: 992px) {
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .initiatives-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .footer-content {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
+        a:hover {
+            text-decoration: underline;
         }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 24px;
             }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-            
-            nav ul {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: var(--primary);
-                flex-direction: column;
-                padding: 1rem 0;
-                text-align: center;
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-            }
-            
-            nav ul.active {
-                display: flex;
-            }
-            
-            nav ul li {
-                margin: 0;
-                padding: 0.8rem 0;
-            }
-            
-            .mobile-menu {
-                display: block;
-            }
-            
-            .initiatives-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .footer-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .stats {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Animation for stats counter */
-        .counter {
-            transition: all 0.5s ease;
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container nav-container">
-            <div class="logo">
-                <i class="fas fa-seedling"></i>
-                <span>Green Network</span>
+<header>
+    <h1>江苏盐城 · 东方湿地之都</h1>
+    <p>海盐文明 · 候鸟天堂 · 江淮水乡人情味</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#overview">城市概况</a></li>
+        <li><a href="#nature">山海与湿地</a></li>
+        <li><a href="#culture">人文与非遗</a></li>
+        <li><a href="#life">城市生活气息</a></li>
+        <li><a href="#food">盐城味道</a></li>
+        <li><a href="#tips">旅行小贴士</a></li>
+    </ul>
+</nav>
+
+<main>
+    <!-- 城市概况 -->
+    <section id="overview" class="card">
+        <h2>一、城市概况</h2>
+        <p class="tagline">因盐得名、向海而生，是江苏面积最大的地级市。</p>
+
+        <img class="hero-img"
+             src="https://upload.wikimedia.org/wikipedia/commons/4/45/Bank_of_Jiangsu_Yancheng%2C_China.jpg"
+             alt="夜色中的盐城城市风光" />
+        <p class="img-caption">
+            盐城城市夜景（摄影：ChenGui，CC&nbsp;BY-SA&nbsp;4.0，图片来源：Wikimedia&nbsp;Commons）
+        </p>
+
+        <p>
+            盐城位于江苏东部沿海，东临黄海，河网密布、湖荡纵横，被誉为“东方湿地之都”“百河之城”。
+            这里拥有江苏最长的海岸线和成片滩涂，是长三角北翼重要的生态屏障和新兴沿海城市。
+        </p>
+        <p>
+            盐城“因盐设县，以盐立城”。早在秦汉时期，当地先民便“煮海为盐”，
+            汉武帝时设置盐渎县，东晋更名为盐城，延续至今两千多年。
+            海盐文化、移民文化、农垦文化与红色文化在这里交织，构成独特的城市气质。
+        </p>
+    </section>
+
+    <!-- 山海与湿地 -->
+    <section id="nature" class="card">
+        <h2>二、山海与湿地：候鸟与麋鹿的家园</h2>
+        <p class="tagline">世界自然遗产地 · 候鸟迁徙中转站 · 麋鹿与丹顶鹤的乐土</p>
+
+        <div class="two-cols">
+            <div class="col">
+                <p>
+                    盐城拥有中国第54处世界自然遗产——黄（渤）海候鸟栖息地（第一期），
+                    滨海湿地生态系统保存完好，是东亚-澳大利西亚候鸟迁飞路线上的关键一站。
+                    每年有数以千万计的候鸟在此停歇、越冬，其中包括国家一级保护动物丹顶鹤、东方白鹳等珍稀物种。
+                </p>
+                <p>
+                    位于沿海的
+                    <strong>盐城黄海湿地珍禽国家级自然保护区</strong>
+                    和
+                    <strong>中华麋鹿园</strong>
+                    ，分别以丹顶鹤和麋鹿为“代言人”。这里生活着数量可观的野生麋鹿群，
+                    以及冬季成群结队到访的丹顶鹤、白头鹤等，为盐城赢得“麋鹿之乡、丹顶鹤家园”的美誉。
+                </p>
+                <p>
+                    走进湿地栈道，看芦苇摇曳、潮水涨落，远处白鹤掠过水面，
+                    是盐城最具代表性的自然体验之一。
+                </p>
             </div>
-            <nav>
-                <div class="mobile-menu">
-                    <i class="fas fa-bars"></i>
-                </div>
+            <div class="col">
+                <img class="hero-img"
+                     src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Red-crowned_Crane_1.jpg"
+                     alt="丹顶鹤" />
+                <p class="img-caption">
+                    丹顶鹤（Red-crowned Crane，摄影：Ryan&nbsp;E.&nbsp;Poplin，CC&nbsp;BY-SA&nbsp;2.0，
+                    图片来源：Wikimedia&nbsp;Commons）
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 人文与非遗 -->
+    <section id="culture" class="card">
+        <h2>三、人文与非遗：盐风海韵里的故事</h2>
+        <p class="tagline">海盐文化 · 淮剧之乡 · 杂技摇篮 · 红色记忆</p>
+
+        <p>
+            盐城是中国海盐文化的重要发祥地之一，古代大量盐场、盐灶分布在沿海地带，
+            沿着串场河形成重重盐场、盐仓和运盐驿站。如今的地名中仍能读出“灶、场、仓、堤”等痕迹，
+            是海盐文明的“活化石”。
+        </p>
+
+        <p>
+            这里同样是
+            <strong>淮剧</strong>
+            的主要发源地。淮剧源自盐阜地区民间小戏，唱腔质朴、乡音浓郁，
+            许多经典剧目取材于百姓生活，既带有江淮水乡的温婉，又不乏北方的豪爽。
+            建湖淮剧小镇等地，将传统舞台与现代文旅结合，成为老少皆宜的文化打卡地。
+        </p>
+
+        <p>
+            盐城还是中国重要的杂技之乡。建湖杂技历史悠久，早在明清时期，
+            当地艺人就凭借扎实的功底走南闯北，如今“建湖杂技”被列入国家级非物质文化遗产，
+            在大型文艺演出和国际交流中频频亮相。
+        </p>
+
+        <p>
+            革命年代，新四军在盐城重建军部，盐城成为苏北抗日根据地的心脏之一。
+            如今，新四军纪念馆、八路军新四军会师旧址等红色景点，
+            记录着那段峥嵘岁月，也是本地中小学研学爱国主义教育的重要场所。
+        </p>
+    </section>
+
+    <!-- 城市生活气息 -->
+    <section id="life" class="card">
+        <h2>四、城市生活气息：慢节奏的沿海小城</h2>
+        <p class="tagline">“小城不小气”——既有现代都市，又保留水乡慢生活。</p>
+
+        <p>
+            走在盐城街头，一边是高楼林立、灯光璀璨的现代商业区，
+            一边是穿城而过的河道、沿河绿道与口袋公园。
+            城市整体节奏不算紧张，常能看到市民沿河骑行、散步，
+            或在小广场上听淮戏、看腰鼓、打太极。
+        </p>
+
+        <p>
+            盐城人待人真诚、性格爽快。传统的邻里互助文化仍很常见，
+            逢年过节大家互送糕点、咸鸭蛋、海鲜干货，带着浓浓“人情味”。
+            在乡村，农忙时节邻里间相互帮工，秋收后一起“杀猪宴”“农家乐”，热闹非凡。
+        </p>
+
+        <p>
+            对游客来说，无论是在老街茶馆里听一段淮剧、在水街夜市里边逛边吃，
+            还是冬天清晨去湿地看一场“万鸟齐飞”的日出，都是最能感受盐城气质的方式。
+        </p>
+    </section>
+
+    <!-- 盐城味道 -->
+    <section id="food" class="card">
+        <h2>五、盐城味道：从海边到田间的家乡菜</h2>
+        <p class="tagline">既有海的鲜，也有河湖与田畴的香。</p>
+
+        <div class="two-cols">
+            <div class="col">
+                <h3>经典小吃与点心</h3>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#initiatives">Initiatives</a></li>
-                    <li><a href="#get-involved">Get Involved</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><strong>阜宁大糕</strong>：用上好糯米蒸制，口感软糯细腻，常在逢年过节、喜庆宴席上出现。</li>
+                    <li><strong>建湖藕饼</strong>：以本地莲藕和猪肉为主料，外酥里嫩、咸鲜清甜，是建湖一带的代表小吃。</li>
+                    <li><strong>滨海香酥饼</strong>：层次分明、口感酥脆，多作为早餐或路上小食。</li>
+                    <li><strong>东台鱼汤面 / 大丰鱼汤面</strong>：以鲜鱼熬汤，汤白味鲜，是沿海地区颇受欢迎的一碗“家常面”。</li>
                 </ul>
-            </nav>
+            </div>
+            <div class="col">
+                <h3>山海农产与家常味</h3>
+                <ul>
+                    <li><strong>射阳大米</strong>：出自里下河平原，米粒晶莹、口感柔软，被誉为“米中精品”。</li>
+                    <li><strong>东台西瓜</strong>：皮薄汁多、甜度高，是夏季“解暑神器”。</li>
+                    <li><strong>黄海海鲜</strong>：如梭子蟹、对虾、蛏子、文蛤等，做法以清蒸、白灼、葱姜爆炒为主，讲究“原汁原味”。</li>
+                    <li><strong>咸鸭蛋、虾酱等腌制品</strong>：利用海盐和沿海渔获制成，是不少盐城人餐桌上的“下饭搭档”。</li>
+                </ul>
+            </div>
         </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container hero-content">
-            <h1>Protect Our Planet, Preserve Our Future</h1>
-            <p>Join the global movement to create a sustainable world through conservation, education, and community action.</p>
-            <a href="#get-involved" class="btn">Join Our Network</a>
-        </div>
+        <p>
+            总体来说，盐城菜属于苏菜体系，兼有淮扬菜的清鲜与沿海菜肴的质朴爽口，
+            少油不腻、重鲜重本味，非常适合细细品尝。
+        </p>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Green Network</h2>
-                <p>We are a global community dedicated to environmental protection and sustainable development.</p>
-            </div>
-            <div class="about-content">
-                <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Team planting trees">
-                </div>
-                <div class="about-text">
-                    <h3>Our Mission</h3>
-                    <p>Green Network is committed to creating a sustainable future by protecting natural ecosystems, promoting renewable energy, and empowering communities to take environmental action.</p>
-                    <p>Founded in 2010, we've grown from a small grassroots organization to an international network with over 50,000 members across 120 countries.</p>
-                    <p>Our approach combines scientific research, community engagement, and policy advocacy to address the most pressing environmental challenges of our time.</p>
-                    <a href="#" class="btn">Learn More</a>
-                </div>
-            </div>
-            <div class="stats">
-                <div class="stat-item">
-                    <i class="fas fa-tree"></i>
-                    <h3 class="counter" data-target="2500000">0</h3>
-                    <p>Trees Planted</p>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-users"></i>
-                    <h3 class="counter" data-target="50000">0</h3>
-                    <p>Active Members</p>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-globe-americas"></i>
-                    <h3 class="counter" data-target="120">0</h3>
-                    <p>Countries Reached</p>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-recycle"></i>
-                    <h3 class="counter" data-target="1500">0</h3>
-                    <p>Cleanup Projects</p>
-                </div>
-            </div>
-        </div>
+    <!-- 旅行贴士 -->
+    <section id="tips" class="card">
+        <h2>六、旅行小贴士</h2>
+        <ul>
+            <li><strong>最佳季节：</strong>春秋两季气候宜人；每年冬季是观赏丹顶鹤和候鸟的好时机。</li>
+            <li><strong>必打卡方向：</strong>黄海湿地、丹顶鹤保护区、中华麋鹿园、建湖淮剧小镇、东台西溪、城市水街等。</li>
+            <li><strong>穿衣与防护：</strong>沿海风大，冬季注意保暖；去湿地观鸟建议穿深色衣物、携带望远镜。</li>
+            <li><strong>尊重生态：</strong>在自然保护区内不投喂、不惊扰鸟类和麋鹿，不采挖植物、不乱扔垃圾，用文明行为守护这片湿地家园。</li>
+        </ul>
     </section>
+</main>
 
-    <!-- Initiatives Section -->
-    <section class="initiatives" id="initiatives">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Initiatives</h2>
-                <p>Discover the key programs and projects we're implementing to protect our planet.</p>
-            </div>
-            <div class="initiatives-grid">
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://dialogue.earth/content/uploads/2021/04/lessons-from-the-rush-to-reforest-china-dialogue-2400x1599.jpg" alt="Reforestation">
-                    </div>
-                    <div class="initiative-content">
-                        <h3>Global Reforestation</h3>
-                        <p>Planting millions of trees worldwide to restore ecosystems, combat climate change, and protect biodiversity.</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
-                </div>
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Ocean Conservation">
-                    </div>
-                    <div class="initiative-content">
-                        <h3>Ocean Conservation</h3>
-                        <p>Protecting marine ecosystems, reducing plastic pollution, and promoting sustainable fishing practices.</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
-                </div>
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Renewable Energy">
-                    </div>
-                    <div class="initiative-content">
-                        <h3>Renewable Energy</h3>
-                        <p>Promoting solar, wind, and other clean energy sources to reduce dependence on fossil fuels.</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta" id="get-involved">
-        <div class="container">
-            <h2>Join Our Global Movement</h2>
-            <p>Together, we can create a sustainable future for generations to come. Every action counts, no matter how small.</p>
-            <a href="#" class="btn">Become a Member</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Green Network</h3>
-                    <p>We are dedicated to protecting our planet through collaborative action, education, and sustainable solutions.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#initiatives">Initiatives</a></li>
-                        <li><a href="#get-involved">Get Involved</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Our Programs</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Reforestation</a></li>
-                        <li><a href="#">Ocean Cleanup</a></li>
-                        <li><a href="#">Wildlife Protection</a></li>
-                        <li><a href="#">Climate Education</a></li>
-                        <li><a href="#">Sustainable Agriculture</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Copper Creek Drive, New York</p>
-                    <p><i class="fas fa-phone"></i> +1 (312) 171-0771</p>
-                    <p><i class="fas fa-envelope"></i> support@greennetwork.org</p>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Green Network. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Mobile Menu Toggle
-        document.querySelector('.mobile-menu').addEventListener('click', function() {
-            document.querySelector('nav ul').classList.toggle('active');
-        });
-
-        // Counter Animation
-        function animateCounters() {
-            const counters = document.querySelectorAll('.counter');
-            const speed = 200; // The lower the slower
-            
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
-                
-                const inc = target / speed;
-                
-                if(count < target) {
-                    counter.innerText = Math.ceil(count + inc);
-                    setTimeout(animateCounters, 1);
-                } else {
-                    counter.innerText = target;
-                }
-            });
-        }
-
-        // Initialize counters when page loads
-        window.addEventListener('load', animateCounters);
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    document.querySelector('nav ul').classList.remove('active');
-                }
-            });
-        });
-    </script>
+<footer>
+    本页为静态介绍示例，图片均来自 Wikimedia&nbsp;Commons，对原作者表示致谢。
+</footer>
 </body>
-
 </html>
